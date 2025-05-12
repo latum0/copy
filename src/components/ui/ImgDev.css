@@ -1,0 +1,137 @@
+/* ImgDev.css */
+.imgDev-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    width: 100%;
+    height: 70vh;
+    margin: 2rem auto;
+    padding: 100px 2rem;
+
+    position: relative;
+    overflow: hidden;
+    
+  }
+  
+  .text-content {
+    flex: 1;
+    padding-right: 3rem;
+    z-index: 2;
+    padding-left: 4rem;
+  }
+  
+  .categories-label {
+    color: #00FF66;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .main-heading {
+    color: white;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
+  
+  .countdown-timer {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .time-block {
+    text-align: center;
+  }
+  
+  .time-number {
+    display: block;
+    color: #00FF66;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .time-label {
+    color: white;
+    font-size: 0.9rem;
+  }
+  
+  .buy-now-button {
+    background: #00FF66;
+    color: white;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .buy-now-button:hover {
+    background: #00cc55;
+  }
+  
+  .image-container {
+    flex: 1;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .image-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('src/assets/mbHome.png') center/cover;
+    filter: blur(80px);
+    opacity: 0.7;
+    z-index: 1;
+  }
+  
+  .main-image {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    z-index: 2;
+    border-radius: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .imgDev-container {
+      flex-direction: column;
+      height: auto;
+      padding: 2rem;
+    }
+  
+    .text-content {
+      padding-right: 0;
+      margin-bottom: 2rem;
+    }
+  
+    .main-heading {
+      font-size: 2.5rem;
+    }
+  
+    .countdown-timer {
+      gap: 1rem;
+    }
+  
+    .time-number {
+      font-size: 2rem;
+    }
+  
+    .image-container::before {
+      width: 120%;
+      height: 120%;
+      left: -10%;
+    }
+  
+    .main-image {
+      max-width: 100%;
+    }
+  }

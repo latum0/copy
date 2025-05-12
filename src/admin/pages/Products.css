@@ -1,0 +1,269 @@
+.products-page {
+  width: 80%;
+  margin: 0 auto; /* Centers the content */
+  padding: 20px;
+  background-color: #f4f7f6;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+/* Header */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.page-title {
+  font-size: 2rem;
+  color: #333;
+}
+
+.button-primary, .button-submit {
+  padding: 10px 20px;
+  background-color: #007bff; /* Bleu */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.button-primary:hover, .button-submit:hover {
+  background-color: #0056b3; /* Bleu plus foncé au survol */
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 100px;
+  background-color: #f9f9f9; /* Légère teinte de fond */
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.modal-close {
+  padding: 10px 20px;
+  background-color: whitesmoke;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  background-color: whitesmoke;
+}
+
+.success-message {
+  color: green;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Spinner */
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-left-color: whitesmoke;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Table styling */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.data-table th {
+  background-color: whitesmoke;
+  color: white;
+}
+
+.product-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-id {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 5px;
+}
+
+/* Status badge */
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.status-in-stock {
+  background-color: #4caf50;
+  color: white;
+}
+
+.status-out-of-stock {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Action buttons */
+.actions-cell {
+  position: relative;
+}
+
+.action-button {
+  padding: 5px 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.action-button:hover {
+  background-color: #ddd;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  min-width: 150px;
+  margin-top: 10px;
+  z-index: 100;
+  right: 15px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: #ddd;
+  margin: 5px 0;
+}
+
+/* Special dropdown styles */
+.dropdown-menu.down {
+  top: 100%;
+  margin-top: 5px;
+}
+
+.dropdown-menu.up {
+  bottom: 100%;
+  margin-bottom: 5px;
+}
+
+.delete-item {
+  color: #f44336;
+}
+
+.delete-item:hover {
+  background-color: #ffebee;
+}
+
+/* Search bar */
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Correction du problème du dropdown qui est caché */
+.data-table {
+  overflow: visible;
+  position: relative;
+}
+
+/* Style spécial pour dropdown qui s'ouvre vers le haut */
+.dropdown-menu.drop-up {
+  bottom: 100%;
+  top: auto;
+  margin-top: 0;
+  margin-bottom: 10px;
+}

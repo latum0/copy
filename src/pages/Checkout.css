@@ -1,0 +1,325 @@
+/* Réinitialisation et styles de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+  line-height: 1.5;
+}
+
+/* Page de commande */
+.checkout-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+}
+
+.checkout-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Formulaire de commande */
+.order-form {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-group .required {
+  color: #ff6b00;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #ff6b00;
+  outline: none;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #ff6b00;
+}
+
+.checkbox-group label {
+  margin-bottom: 0;
+}
+
+/* Résumé de la commande */
+.order-summary {
+  background-color: #f9f9f9;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.summary-value {
+  font-weight: 600;
+}
+
+.total {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Section de paiement */
+.payment-section {
+  margin-top: 30px;
+}
+
+.payment-section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.payment-options {
+  margin-bottom: 30px;
+}
+
+.payment-option {
+  margin-bottom: 15px;
+}
+
+.payment-radio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.payment-radio input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #ff6b00;
+}
+
+.payment-radio label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.payment-icon {
+  color: #000;
+}
+
+/* Sélection de carte */
+.card-selection {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.card-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  transition: all 0.3s;
+  width: 100px;
+}
+
+.card-button:hover {
+  border-color: #ff6b00;
+}
+
+.card-button.selected {
+  border-color: #ff6b00;
+  background-color: rgba(255, 107, 0, 0.05);
+}
+
+.card-logo {
+  height: 40px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.card-logo.visa {
+  background-color: #1a1f71;
+  color: white;
+  font-size: 16px;
+}
+
+.card-logo.mastercard {
+  background-color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-logo.mastercard:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #eb001b;
+  left: 10px;
+}
+
+.card-logo.mastercard:after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #f79e1b;
+  right: 10px;
+}
+
+.card-logo.amex {
+  background-color: #006fcf;
+  color: white;
+  font-size: 14px;
+}
+
+.card-name {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Section code promo */
+.coupon-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.coupon-section input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.apply-coupon {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0 20px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.apply-coupon:hover {
+  background-color: #ff6b00;
+}
+
+/* Bouton de commande */
+.place-order-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.place-order-btn:hover {
+  background-color: #ff6b00;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .order-summary {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .order-form,
+  .order-summary {
+    padding: 20px;
+  }
+
+  .card-selection {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-title {
+    font-size: 24px;
+  }
+}
